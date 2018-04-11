@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: 'VuejsLogin/static/',
+    assetsPublicPath: 'https://github.com/viniciuslcpereira97/VuejsLogin/tree/gh-pages/static',
 
     /**
      * Source Maps
