@@ -12,15 +12,32 @@ export default {
   components: {
     FacebookLogin,
   },
+  data() {
+    return {
+      user: {
+        name: null,
+        email: null,
+      },
+    };
+  },
   methods: {
-    loggedIn(response) {
-      if (response.authResponse !== null) {
-        response.FB.api('/me', { fields: 'name,email' }, (profile) => {
-          console.log(profile);
+    loggedIn(object) {
+      if (object.response.status === 'connected') {
+        this.getUserData(object);
+        this.$router.push({
+          name: 'user-dashboard',
+          params: { user: this.user },
         });
-        return this.$router.push('dashboard');
       }
-      return console.log('not logged', response);
+    },
+    setUser(profile) {
+      this.user.name = profile.name;
+      this.user.email = profile.email;
+    },
+    getUserData(object) {
+      object.FB.api('/me', { fields: 'name,email' }, (profile) => {
+        this.setUser(profile);
+      });
     },
   },
 };

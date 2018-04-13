@@ -13,6 +13,7 @@ export default new Router({
           path: 'dashboard',
           name: 'user-dashboard',
           component: () => import('@/views/Dashboard'),
+          props: true,
         },
       ],
     },
