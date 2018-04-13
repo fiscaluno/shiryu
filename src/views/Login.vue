@@ -14,13 +14,13 @@ export default {
   },
   methods: {
     loggedIn(response) {
-      if (response.authResponse) {
+      if (response.authResponse !== null) {
         response.FB.api('/me', { fields: 'name,email' }, (profile) => {
           console.log(profile);
         });
         return this.$router.push('dashboard');
       }
-      return console.log('not logged', response.FB);
+      return console.log('not logged', response);
     },
   },
 };
