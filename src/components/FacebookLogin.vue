@@ -2,11 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col s12 m5 offset-m3">
-        <div class="card-panel grey darken-1">
+        <div class="card-panel">
 
-          <h4 class="white-text">Bem vindo ao Fiscaluno</h4>
-
-          <vue-facebook-login class="button"
+          <h4 align="center">Fiscaluno login</h4>
+          <br/>
+          <vue-facebook-login align="center" class="button"
             appId="157805414887234"
             @login="getUserData"
             @logout="onLogout"
@@ -28,10 +28,12 @@ export default {
   components: {
     VueFacebookLogin,
   },
-
+  props: [
+    'callback',
+  ],
   methods: {
     getUserData(response) {
-      console.log(response);
+      this.callback(response);
     },
     onLogout(response) {
       console.log(response);
