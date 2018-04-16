@@ -1,14 +1,10 @@
 <template lang="html">
-  <div class="container-fluid">
-    <!-- # Header -->
-    <custom-header></custom-header>
-
+  <div>
     <!-- # Search -->
     <div class="row first-div">
       <search-bar></search-bar>
     </div>
-
-    <!-- # TOP3 -->
+      <!-- # TOP3 -->
     <div class="row grey lighten-2">
       <br/>
       <div class="container">
@@ -26,8 +22,7 @@
       </div>
       <br/>
     </div>
-
-    <!-- # Choose your Section -->
+      <!-- # Choose your Section -->
     <div class="row grey lighten-2">
       <br/>
       <div class="container">
@@ -41,10 +36,6 @@
         </section-panel>
       </div>
     </div>
-
-    <!-- # Footer -->
-    <custom-footer></custom-footer>
-    <router-view></router-view>
   </div>
 </template>
 

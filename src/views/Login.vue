@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container-fluid">
+  <div>
     <custom-header></custom-header>
 
     <div style="margin-top: 28vh">

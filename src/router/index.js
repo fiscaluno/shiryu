@@ -8,8 +8,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: () => import('@/views/Landing'),
+      component: () => import('@/views/Layout'),
       children: [
+        {
+          path: '',
+          name: 'landing-page',
+          component: () => import('@/views/Landing'),
+        },
         {
           path: 'dashboard',
           name: 'user-dashboard',

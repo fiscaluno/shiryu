@@ -1,7 +1,5 @@
 <template lang="html">
-  <div class="container-fluid">
-    <router-view></router-view>
-    <custom-header></custom-header>
+  <div>
     <div class="row">
       <div class="col l3">
         <ul class="collection">
@@ -19,14 +17,7 @@
 </template>
 
 <script>
-import CustomHeader from '@/components/CustomHeader';
-import CustomFooter from '@/components/CustomFooter';
-
 export default {
-  components: {
-    CustomHeader,
-    CustomFooter,
-  },
   props: [
     'user',
   ],
