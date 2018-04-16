@@ -44,6 +44,7 @@
 
     <!-- # Footer -->
     <custom-footer></custom-footer>
+    <router-view></router-view>
   </div>
 </template>
 
