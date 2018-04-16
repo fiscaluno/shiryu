@@ -1,7 +1,7 @@
 <template lang="html">
   <nav>
     <div class="nav-wrapper blue darken-2">
-      <a href="#" class="brand-logo">&nbsp;Fiscaluno</a>
+      <router-link to="/" class="brand-logo">&nbsp;Fiscaluno</router-link>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#">partners</a></li>
         <li><a href="#">terms</a></li>
