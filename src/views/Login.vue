@@ -1,16 +1,25 @@
 <template lang="html">
-  <div style="margin-top: 28vh">
-    <facebook-login :callback="loggedIn"></facebook-login>
-    <router-view></router-view>
+  <div class="container-fluid">
+    <custom-header></custom-header>
+
+    <div style="margin-top: 28vh">
+      <facebook-login :callback="loggedIn"></facebook-login>
+      <router-view></router-view>
+    </div>
+
   </div>
 </template>
 
 <script>
+import CustomHeader from '@/components/CustomHeader';
+import CustomFooter from '@/components/CustomFooter';
 import FacebookLogin from '@/components/FacebookLogin';
 
 export default {
   components: {
     FacebookLogin,
+    CustomHeader,
+    CustomFooter,
   },
   data() {
     return {
@@ -22,6 +31,7 @@ export default {
   },
   methods: {
     loggedIn(object) {
+      console.log('store', this.$store);
       if (object.response.status === 'connected') {
         this.getUserData(object);
         this.$router.push({
