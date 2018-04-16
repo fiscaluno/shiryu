@@ -1,17 +1,17 @@
 <template lang="html">
-  <div class="col l6 search-container offset-l3">
+  <div class="col search-container offset-s1 s10 offset-l3 l6">
     <div class="row">
-      <div class="input-field col l5">
+      <div class="input-field col s12 l5">
         <i class="material-icons prefix white-text">school</i>
         <input id="course_prefix" type="text" class="white-text">
         <label for="course_prefix">Course</label>
       </div>
-      <div class="input-field col l5">
+      <div class="input-field col s12 l5">
         <i class="material-icons prefix white-text">location_on</i>
         <input id="location_prefix" type="text" class="white-text">
         <label for="location_prefix">Location</label>
       </div>
-      <div class="input-field col l1 search-button">
+      <div class="input-field col offset-s1 s4 l1 search-button">
         <a class="btn-floating btn-large waves-effect waves-light blue darken-1">
           <i class="material-icons">search</i>
         </a>

@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="col s12 m6 l4">
+  <div class="col s12 m12 l4">
     <div class="card small">
       <div class="card-image">
         <img :src="this.img">
