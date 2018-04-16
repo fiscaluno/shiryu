@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="container-fluid">
-    <router-view></router-view>
     <!-- # Header -->
     <custom-header></custom-header>
 
