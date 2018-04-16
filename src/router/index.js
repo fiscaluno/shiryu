@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Guard from '../services/middleware';
+// import Guard from '../services/middleware';
 
 Vue.use(Router);
 
@@ -14,7 +14,7 @@ export default new Router({
           path: 'dashboard',
           name: 'user-dashboard',
           component: () => import('@/views/Dashboard'),
-          beforeEnter: Guard.auth,
+          // beforeEnter: Guard.auth,
           props: true,
         },
       ],
