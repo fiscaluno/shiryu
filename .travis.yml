@@ -1,4 +1,4 @@
-language: go
+language:  JavaScript
 
 go:
     - "1.9"
